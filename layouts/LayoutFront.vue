@@ -1,9 +1,9 @@
 <template>
   <div class="main">
-    <div class="wrapper">
+    <div class="wrapper" >
       <Nuxt />
     </div>
-    <footer>
+    <footer class="text-center">
       ©2022 alhs1995
     </footer>
   </div>
@@ -20,6 +20,6 @@ export default {
     @apply w-auto h-auto min-h-screen p-0 flex flex-col bg-gray-100;
   }
   .wrapper{
-    @apply flex-grow;
+    @apply flex-grow flex justify-center;
   }
 </style>

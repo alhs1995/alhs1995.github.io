@@ -1,6 +1,6 @@
 <template>
   <svg :class="propClass" xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <path :d="path" :stroke="stroke" />
+    <path :d="path" :fill="fill" :stroke="stroke" />
   </svg>
 </template>
 
@@ -18,6 +18,10 @@ export default {
     propClass: {
       type: String,
       default: 'h-6 w-6'
+    },
+    fill: {
+      type: String,
+      default: 'none'
     }
   }
 }
