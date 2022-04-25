@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="wrapper" >
+    <div class="wrapper">
       <Nuxt />
     </div>
     <footer class="text-center">

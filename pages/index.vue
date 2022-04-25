@@ -22,42 +22,44 @@
           <span class="block-title">Skills</span>
           <span class="Skill-title">Web application</span>
           <div class="skill">
-            <PathIcon :path="mdiVuejs" stroke="none" fill="green" propClass="mr-3 h-6 w-6"/>
+            <PathIcon :path="mdiVuejs" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
             <span class="text-xl font-semibold block">VueJs</span>
           </div>
           <div class="skill">
-            <PathIcon :path="mdiLanguageJavascript" stroke="none" fill="green" propClass="mr-3 h-6 w-6"/>
+            <PathIcon :path="mdiLanguageJavascript" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
             <span class="text-xl font-semibold block">Javascript</span>
           </div>
           <span class="Skill-title">Web Design</span>
           <div class="skill">
-            <PathIcon :path="mdiLanguageHtml5" stroke="none" fill="green" propClass="mr-3 h-6 w-6"/>
+            <PathIcon :path="mdiLanguageHtml5" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
             <span class="text-xl font-semibold block">HTML</span>
           </div>
           <div class="skill">
-            <PathIcon :path="mdiLanguageCss3" stroke="none" fill="green" propClass="mr-3 h-6 w-6"/>
+            <PathIcon :path="mdiLanguageCss3" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
             <span class="text-xl font-semibold block">CSS</span>
           </div>
           <div class="skill">
-            <PathIcon :path="mdiSass" stroke="none" fill="green" propClass="mr-3 h-6 w-6"/>
+            <PathIcon :path="mdiSass" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
             <span class="text-xl font-semibold block">SASS/SCSS</span>
           </div>
           <div class="skill">
-            <PathIcon :path="mdiSvg" stroke="none" fill="green" propClass="mr-3 h-6 w-6"/>
+            <PathIcon :path="mdiSvg" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
             <span class="text-xl font-semibold block">SVG</span>
           </div>
           <span class="Skill-title">Other</span>
           <div class="skill">
-            <PathIcon :path="mdiDatabase" stroke="none" fill="green" propClass="mr-3 h-6 w-6"/>
+            <PathIcon :path="mdiDatabase" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
             <span class="text-xl font-semibold block">T-SQL</span>
           </div>
         </div>
         <div class="blocks">
           <span class="block-title">Educations</span>
-          <h4 class="text-2xl text-yellow-500">Bachelor</h4>
-          <p class="text-xl">Tunghai University</p>
-          <p>Computer Science</p>
-          <p>09/2013 ~ 07/2017</p>
+          <h4 class="text-2xl text-yellow-500">
+            Bachelor
+          </h4>
+          <span class="text-xl">Tunghai University</span>
+          <span>Computer Science</span>
+          <span>09/2013 ~ 07/2017</span>
         </div>
         <div class="blocks">
           <span class="block-title">Experiences</span>
@@ -84,14 +86,14 @@
       </div>
     </div>
     <div class="flex flex-row justify-center">
-      <a class="button">
-        <PathIcon :path="mdiPost" stroke="none" fill="#F59E0B" propClass=""/>
-      </a>
+      <nuxt-link class="button" to="/blog">
+        <PathIcon :path="mdiPost" stroke="none" fill="#F59E0B" />
+      </nuxt-link>
       <a class="button" href="http://github.com/alhs1995" target="_blank">
-        <PathIcon :path="mdiGithub" stroke="none" fill="#F59E0B" propClass=""/>
+        <PathIcon :path="mdiGithub" stroke="none" fill="#F59E0B" />
       </a>
       <a class="button" href="http://www.linkedin.com/in/侑融-李-90680a218" target="_blank">
-        <PathIcon :path="mdiLinkedin" stroke="none" fill="#F59E0B" propClass=""/>
+        <PathIcon :path="mdiLinkedin" stroke="none" fill="#F59E0B" />
       </a>
     </div>
   </div>
