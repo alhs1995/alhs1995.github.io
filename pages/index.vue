@@ -127,7 +127,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .personal{
     @apply object-cover h-44 w-44 rounded-full object-top border-2 border-gray-400 shadow-xl row-span-2;
   }

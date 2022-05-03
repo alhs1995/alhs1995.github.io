@@ -8,7 +8,18 @@
           </h1>
         </div>
         <div class="side">
-          123
+          <nuxt-link class="side-link" to="/blog">
+            最新發表
+          </nuxt-link>
+          <nuxt-link class="side-link" to="/">
+            關於我
+          </nuxt-link>
+          <nuxt-link class="side-link" to="/blog">
+            所有文章
+          </nuxt-link>
+          <nuxt-link class="side-link" to="/blog">
+            分類
+          </nuxt-link>
         </div>
         <footer class="text-center">
           ©2022 alhs1995
@@ -43,7 +54,10 @@ export default {
     flex: 0 0 20%;
   }
   .side{
-    @apply flex-grow mx-11 mt-11 mb-7 rounded-3xl shadow-lg;
+    @apply flex-grow mx-11 mt-11 mb-7 rounded-3xl shadow-lg flex flex-col justify-around;
+  }
+  .side-link{
+    @apply text-center text-3xl;
   }
   .main-context{
     @apply flex-grow;
