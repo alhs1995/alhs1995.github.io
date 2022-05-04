@@ -1,5 +1,5 @@
 <template>
-  <div class="w-11/12 flex">
+  <div class="w-full">
     <post-card v-for="article in articles" :key="article.slug" :body="article" />
   </div>
 </template>
@@ -14,9 +14,9 @@ export default {
   layout: 'LayoutBlog',
   async asyncData ({ $content }) {
     const articles = await $content('articles')
-      .only(['title', 'slug', 'excerpt'])
       .sortBy('createdAt', 'asc')
       .fetch()
+    console.log(articles)
     return {
       articles
     }

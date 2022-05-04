@@ -28,7 +28,9 @@
       <div class="main-context">
         <Nuxt />
       </div>
-      <div class="right-side"></div>
+      <div class="right-side">
+        <!--  -->
+      </div>
     </div>
   </div>
 </template>
