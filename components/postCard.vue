@@ -13,10 +13,10 @@
     <div class="card-footer">
       <div class="tags">
         標籤：
-        <nuxtx-link v-for="tag in body.tags" :key="tag" class="tag">
+        <nuxt-link v-for="tag in body.tags" :key="tag" class="tag" to="/blog">
           <PathIcon :path="mdiTag" stroke="#065f46" fill="none" prop-class="h-6 w-6 inline-block" />
           {{ tag }}
-        </nuxtx-link>
+        </nuxt-link>
       </div>
       <div class="upTime">
         時間：{{ new Date(body.createdAt).toLocaleString() }}
@@ -70,6 +70,9 @@ export default {
   }
   .tag{
     @apply inline-block bg-green-300 mx-1 p-1 rounded-3xl text-green-700;
+  }
+  >>>.tag:hover svg path{
+    fill: #065f46;
   }
   .upTime{
     @apply text-blue-900;
