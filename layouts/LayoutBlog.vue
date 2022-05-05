@@ -6,19 +6,30 @@
           <h1 class="text-5xl text-center pt-9">
             AL的隨筆部落
           </h1>
+          <p class="text-center pt-3">
+            分享生活的感悟與學習經驗
+          </p>
         </div>
         <div class="side">
           <nuxt-link class="side-link" to="/blog">
-            最新發表
+            <span>
+              最新發表
+            </span>
           </nuxt-link>
           <nuxt-link class="side-link" to="/">
-            關於我
+            <span>
+              關於我
+            </span>
           </nuxt-link>
           <nuxt-link class="side-link" to="/blog">
-            所有文章
+            <span>
+              所有文章
+            </span>
           </nuxt-link>
           <nuxt-link class="side-link" to="/blog">
-            分類
+            <span>
+              分類
+            </span>
           </nuxt-link>
         </div>
         <footer class="text-center">
@@ -59,10 +70,29 @@ export default {
     @apply flex-grow mx-11 mt-11 mb-7 rounded-3xl shadow-lg flex flex-col justify-around;
   }
   .side-link{
-    @apply text-center text-3xl;
+    @apply text-center text-3xl inline;
+  }
+  .side-link span:first-child{
+    @apply relative;
+    z-index: 20;
+  }
+  .side-link:hover span{
+    @apply bg-transparent shadow-lg rounded-lg underline;
+  }
+  .side-link:hover span::before{
+    content: '';
+    @apply bg-blue-300 w-full h-full block absolute opacity-40 rounded-lg;
+    top: 30%;
+    left: 10%;
+    z-index: -1;
   }
   .main-context{
-    @apply flex-grow;
+    @apply flex-grow max-h-screen overflow-y-auto overflow-x-hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .main-context::-webkit-scrollbar {
+    display: none;
   }
   .right-side{
     background-image: linear-gradient(#f3f4f6aa, #f3f4f6aa), url('~/assets/img/right-bg.jpg');
