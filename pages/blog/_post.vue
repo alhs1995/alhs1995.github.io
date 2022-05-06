@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import '@/assets/css/post-content.css'
 import { mdiTag } from '@mdi/js'
 export default {
   layout: 'LayoutBlog',
