@@ -13,10 +13,7 @@
     <div class="card-footer">
       <div class="tags">
         標籤：
-        <nuxt-link v-for="tag in body.tags" :key="tag" class="tag" to="/blog">
-          <PathIcon :path="mdiTag" stroke="#065f46" fill="none" prop-class="h-6 w-6 inline-block" />
-          {{ tag }}
-        </nuxt-link>
+        <PostTag v-for="tag in body.tags" :key="tag" :text="tag" :link="`/blog/post-category/${tag}`" />
       </div>
       <div class="upTime">
         時間：{{ new Date(body.createdAt).toLocaleString() }}
@@ -27,10 +24,10 @@
 
 <script>
 import { mdiTag } from '@mdi/js'
-import PathIcon from '~/components/PathIcon.vue'
+import PostTag from '~/components/PostTag.vue'
 export default {
   components: {
-    PathIcon
+    PostTag
   },
   props: {
     body: {
@@ -67,12 +64,6 @@ export default {
   }
   .tags{
     @apply text-green-500 w-auto;
-  }
-  .tag{
-    @apply inline-block bg-green-300 mx-1 p-1 rounded-3xl text-green-700;
-  }
-  >>>.tag:hover svg path{
-    fill: #065f46;
   }
   .upTime{
     @apply text-blue-900;

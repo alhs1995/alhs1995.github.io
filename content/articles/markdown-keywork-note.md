@@ -1,5 +1,5 @@
 ---
-title: markdown測試
+title: markdown樣式
 tags: ['Modern Web', 'markdown']
 ---
 來完成markdon的樣式吧
@@ -50,7 +50,7 @@ tags: ['Modern Web', 'markdown']
 
 放註腳 [^註腳]
 
-放連結:[這是連結](/blog/test123)
+放連結:[這是連結](/blog/markdown-keywork-note)
 
 > 引用
 > > 第二層

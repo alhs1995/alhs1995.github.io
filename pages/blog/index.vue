@@ -5,18 +5,14 @@
 </template>
 
 <script>
-import postCard from '@/components/postCard.vue'
 export default {
   name: 'IndexPage',
-  components: {
-    postCard
-  },
   layout: 'LayoutBlog',
   async asyncData ({ $content }) {
     const articles = await $content('articles')
+      .only(['title', 'tags', 'excerpt', 'slug', 'createdAt'])
       .sortBy('createdAt', 'asc')
       .fetch()
-    console.log(articles)
     return {
       articles
     }

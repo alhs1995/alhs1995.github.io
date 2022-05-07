@@ -3,10 +3,7 @@
     <h1>{{ Page.title }}</h1>
     <div class="tags">
       標籤：
-      <nuxt-link v-for="tag in Page.tags" :key="tag" class="tag" to="/blog">
-        <PathIcon :path="mdiTag" stroke="#065f46" fill="none" prop-class="h-6 w-6 inline-block" />
-        {{ tag }}
-      </nuxt-link>
+      <PostTag v-for="tag in Page.tags" :key="tag" :text="tag" :link="`/blog/post-category/${tag}`" />
     </div>
     <div class="time">
       <!-- <div class="cTime">
@@ -23,16 +20,14 @@
 
 <script>
 import '@/assets/css/post-content.css'
-import { mdiTag } from '@mdi/js'
 export default {
   layout: 'LayoutBlog',
   data () {
     return {
-      mdiTag,
       Page: {}
     }
   },
-  mounted () {
+  created () {
     this.fetchPosts(this.$route.params.post)
   },
   methods: {
@@ -51,12 +46,6 @@ export default {
   }
   .tags{
     @apply text-green-500 w-auto pt-2;
-  }
-  .tag{
-    @apply inline-block bg-green-300 mx-1 p-1 rounded-3xl text-green-700;
-  }
-  >>>.tag:hover svg path{
-    fill: #065f46;
   }
   .time{
     @apply pt-1;

@@ -11,11 +11,6 @@
           </p>
         </div>
         <div class="side">
-          <nuxt-link class="side-link" to="/blog">
-            <span>
-              最新發表
-            </span>
-          </nuxt-link>
           <nuxt-link class="side-link" to="/">
             <span>
               關於我
@@ -23,12 +18,17 @@
           </nuxt-link>
           <nuxt-link class="side-link" to="/blog">
             <span>
-              所有文章
+              最新發表
+            </span>
+          </nuxt-link>
+          <nuxt-link class="side-link" to="/blog/post-category">
+            <span>
+              分類
             </span>
           </nuxt-link>
           <nuxt-link class="side-link" to="/blog">
             <span>
-              分類
+              系列文
             </span>
           </nuxt-link>
         </div>

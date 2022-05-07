@@ -1,3 +1,5 @@
+import webpack from "webpack";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -49,5 +51,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'categoryPage',
+        path: '/blog/post-category/:category/:page',
+        component: resolve(__dirname, 'pages/blog/post-category/_category.vue')
+      })
+    }
   }
 }
