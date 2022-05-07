@@ -11,6 +11,10 @@
         </p>
       </div>
       <div>
+        <span class="block mb-3 text-center">
+          <PathIcon :path="mdiMapMarker" stroke="none" fill="green" prop-class="h-6 w-6 inline" />
+          Kauhsiung, Taiwan
+        </span>
         <span class="flag">
           This world is worth fighting for.
         </span>
@@ -24,6 +28,10 @@
           <div class="skill">
             <PathIcon :path="mdiVuejs" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
             <span class="text-xl font-semibold block">VueJs</span>
+          </div>
+          <div class="skill">
+            <PathIcon :path="mdiNuxt" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
+            <span class="text-xl font-semibold block">Nuxt</span>
           </div>
           <div class="skill">
             <PathIcon :path="mdiLanguageJavascript" stroke="none" fill="green" prop-class="mr-3 h-6 w-6" />
@@ -64,7 +72,7 @@
         <div class="blocks">
           <span class="block-title">Experiences</span>
           <div class="company">
-            <span class="company-name">SHANDA INFORMATION CO.,LTD.<span class="text-lg inline">present</span></span>
+            <span class="company-name">SHANDA INFORMATION CO.,LTD.<span class="text-lg inline">01/2021 ~ present</span></span>
             <span>Front-end web developer</span>
             <span>Contractor of InfoChamp Systems Corp.</span>
             <span>Engaged projects :</span>
@@ -74,7 +82,7 @@
             </ul>
           </div>
           <div class="company">
-            <span class="company-name">SKYTEK Industrial Co., Ltd.<span class="text-lg inline">09/2017  ~ 11/2020</span></span>
+            <span class="company-name">SKYTEK Industrial Co., Ltd.<span class="text-lg inline">09/2017 ~ 11/2020</span></span>
             <span>Full stack developer</span>
             <ul>
               <li>Administration systems for over 15 universities.- Full stack developer and Maintainer </li>
@@ -86,13 +94,13 @@
       </div>
     </div>
     <div class="flex flex-row justify-center">
-      <nuxt-link class="button" to="/blog">
+      <nuxt-link class="button" to="/blog" title="blog">
         <PathIcon :path="mdiPost" stroke="none" fill="#F59E0B" />
       </nuxt-link>
-      <a class="button" href="http://github.com/alhs1995" target="_blank">
+      <a class="button" href="http://github.com/alhs1995" target="_blank" title="github">
         <PathIcon :path="mdiGithub" stroke="none" fill="#F59E0B" />
       </a>
-      <a class="button" href="http://www.linkedin.com/in/侑融-李-90680a218" target="_blank">
+      <a class="button" href="http://www.linkedin.com/in/侑融-李-90680a218" target="_blank" title="linkedin">
         <PathIcon :path="mdiLinkedin" stroke="none" fill="#F59E0B" />
       </a>
     </div>
@@ -100,7 +108,7 @@
 </template>
 
 <script>
-import { mdiVuejs, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageCss3, mdiSass, mdiDatabase, mdiSvg, mdiPost, mdiGithub, mdiLinkedin } from '@mdi/js'
+import { mdiMapMarker, mdiVuejs, mdiNuxt, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageCss3, mdiSass, mdiDatabase, mdiSvg, mdiPost, mdiGithub, mdiLinkedin } from '@mdi/js'
 import PathIcon from '~/components/PathIcon.vue'
 import PersonalIcon from '~/assets/img/PersonalIcon-small.jpeg'
 export default {
@@ -112,7 +120,9 @@ export default {
   data () {
     return {
       PersonalIcon,
+      mdiMapMarker,
       mdiVuejs,
+      mdiNuxt,
       mdiLanguageHtml5,
       mdiLanguageJavascript,
       mdiLanguageCss3,
