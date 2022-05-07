@@ -26,11 +26,11 @@
               分類
             </span>
           </nuxt-link>
-          <nuxt-link class="side-link" to="/blog">
+          <!-- <nuxt-link class="side-link" to="/blog">
             <span>
               系列文
             </span>
-          </nuxt-link>
+          </nuxt-link> -->
         </div>
         <footer class="text-center">
           ©2022 alhs1995
