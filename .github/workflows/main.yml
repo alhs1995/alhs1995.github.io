@@ -14,19 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [16.x]
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install
+    - name: yarn add
       run: |
-        npm install
-    - name: npm run build
+        yarn
+    - name: yarn build
       run: |
-        npm run build
+        yarn build
     - name: Commit files
       run: |
         cd $PUBLISH_DIR
