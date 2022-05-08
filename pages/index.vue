@@ -1,5 +1,5 @@
 <template>
-  <div class="w-11/12 flex flex-col justify-self-center">
+  <div class="w-full flex flex-col justify-self-center">
     <div class="grid grid-rows-4 justify-center justify-items-center justify-self-center p-1">
       <img :src="PersonalIcon" class="personal">
       <div class="text-center">
@@ -91,16 +91,40 @@
             </ul>
           </div>
         </div>
+        <div class="blocks">
+          <span class="block-title">Side Projects</span>
+          <div class="projs">
+            <div class="proj">
+              <span>
+                Dungeons &amp; Dragons 5E Rule Book
+              </span>
+              <a class="button proj-btn" title="dnd5e-book" href="https://alhs1995.github.io/dnd-5e-standard-book/" target="_blank">
+                <PathIcon :path="mdiArrowRightThick" stroke="none" fill="#a5b4fc" />
+              </a>
+            </div>
+            <div class="proj">
+              <span>
+                HLL Pacific Exercise
+              </span>
+              <a class="button proj-btn" title="dnd5e-book" href="http://hll-pacific-exercise.aomaple.tw/" target="_blank">
+                <PathIcon :path="mdiArrowRightThick" stroke="none" fill="#a5b4fc" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="flex flex-row justify-center">
-      <nuxt-link class="button" to="/blog" title="blog">
+      <!-- <a class="button" title="dnd5e-book" href="https://alhs1995.github.io/dnd-5e-standard-book/" target="_blank">
+        <PathIcon :path="mdiBookOpenPageVariant" stroke="none" fill="#F59E0B" />
+      </a> -->
+      <nuxt-link class="button footer-button" to="/blog" title="blog">
         <PathIcon :path="mdiPost" stroke="none" fill="#F59E0B" />
       </nuxt-link>
-      <a class="button" href="http://github.com/alhs1995" target="_blank" title="github">
+      <a class="button footer-button" href="http://github.com/alhs1995" target="_blank" title="github">
         <PathIcon :path="mdiGithub" stroke="none" fill="#F59E0B" />
       </a>
-      <a class="button" href="http://www.linkedin.com/in/侑融-李-90680a218" target="_blank" title="linkedin">
+      <a class="button footer-button" href="http://www.linkedin.com/in/侑融-李-90680a218" target="_blank" title="linkedin">
         <PathIcon :path="mdiLinkedin" stroke="none" fill="#F59E0B" />
       </a>
     </div>
@@ -108,7 +132,7 @@
 </template>
 
 <script>
-import { mdiMapMarker, mdiVuejs, mdiNuxt, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageCss3, mdiSass, mdiDatabase, mdiSvg, mdiPost, mdiGithub, mdiLinkedin } from '@mdi/js'
+import { mdiMapMarker, mdiVuejs, mdiNuxt, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageCss3, mdiSass, mdiDatabase, mdiSvg, mdiArrowRightThick, mdiPost, mdiGithub, mdiLinkedin } from '@mdi/js'
 import PathIcon from '~/components/PathIcon.vue'
 import PersonalIcon from '~/assets/img/PersonalIcon-small.jpeg'
 export default {
@@ -129,6 +153,7 @@ export default {
       mdiSass,
       mdiDatabase,
       mdiSvg,
+      mdiArrowRightThick,
       mdiPost,
       mdiGithub,
       mdiLinkedin
@@ -172,6 +197,24 @@ export default {
     @apply inline text-lg ml-3;
   }
   .button{
-    @apply border-2 rounded border-yellow-500 w-9 h-9 p-1 m-3;
+    @apply border-2 w-9 h-9 p-1 inline-block;
+  }
+  .projs{
+    @apply flex flex-col;
+  }
+  .proj{
+    @apply flex items-center justify-between py-3 px-1 rounded-xl;
+  }
+  .proj:nth-of-type(odd){
+    background: rgba(211, 211, 211, 0.3);
+  }
+  .proj:nth-of-type(even){
+    background: rgba(187, 187, 187, 0.5);
+  }
+  .proj-btn{
+    @apply ml-2 rounded-full border-indigo-300;
+  }
+  .footer-button{
+    @apply m-3 rounded border-yellow-500;
   }
 </style>

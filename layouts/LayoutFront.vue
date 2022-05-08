@@ -18,6 +18,7 @@ export default {
 <style >
   .main{
     @apply w-auto h-auto min-h-screen p-0 flex flex-col bg-gray-100;
+    background: linear-gradient(to top right, #fef2f2, #fffbeb, #fdf2f8);
   }
   .wrapper{
     @apply flex-grow flex justify-center;
