@@ -78,8 +78,11 @@
 .nuxt-content a:visited{
   @apply text-indigo-900;
 }
+.nuxt-content code{
+  @apply bg-purple-100 px-1;
+}
 .nuxt-content pre[class*="language-"]{
-  @apply bg-purple-100 bg-gray-200 ;
+  @apply bg-purple-100 border-gray-200 ;
   border-left-width: 5px;
   border-right-width: 5px;
 }

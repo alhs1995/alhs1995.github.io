@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-blog',
+    title: 'Lee, You-Rong',
     htmlAttrs: {
       lang: 'en'
     },

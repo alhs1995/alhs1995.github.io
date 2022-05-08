@@ -10,7 +10,7 @@
         發表時間：{{ new Date(Page.createdAt).toLocaleString() }}
       </div> -->
       <div class="uTime">
-        最後更新時間：{{ new Date(Page.updatedAt).toLocaleString() }}
+        最後更新時間：{{ new Date(Page.createdAt).toLocaleString() }}
       </div>
     </div>
     <hr>
@@ -25,6 +25,17 @@ export default {
   data () {
     return {
       Page: {}
+    }
+  },
+  head () {
+    return {
+      title: this.Page.title + '-AL的隨筆部落',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: this.Page.description },
+        { hid: 'keywords', name: 'keywords', content: this.Page.tags }
+      ]
     }
   },
   created () {
