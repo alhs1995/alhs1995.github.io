@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
   .main{
     @apply w-auto h-auto min-h-screen p-0 flex flex-col bg-gray-100;
   }
