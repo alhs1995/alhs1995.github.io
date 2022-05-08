@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/markdown-keywork-note", {data:[{}],fetch:{},mutations:void 0});

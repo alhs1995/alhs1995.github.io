@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog", {data:[{articles:[{slug:"markdown-keywork-note",title:"markdown樣式",tags:["Modern Web","markdown"],excerpt:{type:"root",children:[{type:"element",tag:"p",props:{},children:[{type:"text",value:"來完成markdown的樣式吧"}]}]},createdAt:"2022-05-08T04:04:22.055Z"}]}],fetch:{},mutations:void 0});
