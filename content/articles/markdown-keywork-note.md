@@ -2,7 +2,7 @@
 title: markdown樣式
 tags: ['Modern Web', 'markdown']
 ---
-來完成markdon的樣式吧
+來完成markdown的樣式吧
 <!--more-->
 # 一級標題 #
 
